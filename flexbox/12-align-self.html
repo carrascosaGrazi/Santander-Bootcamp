@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align self</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border:1px solid black;
+            margin:5px;
+            max-width: 350px;
+            
+        }
+
+        .align{
+            align-items: center;
+        }
+
+        .itens{
+            background-color: blueviolet;
+            color: aliceblue;
+            font-size: 24px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+        
+        .baseline{
+            align-self: baseline;
+        }
+        
+        .stretch{
+            align-self: stretch;
+        }
+        
+        .auto{
+            align-self: auto;
+        }
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h2>row</h2>
+    <p>align self: auto + align itens(container): center</p>
+    <section class="flex-container align">
+        <div class="itens auto">AAA</div>
+        <div class="itens auto">123</div>
+        <div class="itens auto">Lorem ipsum</div>
+        <div class="itens auto">item 4</div>
+    </section>
+
+    <p>align self: center + align itens(container): 0 </p>
+    <section class="flex-container">
+        <div class="itens center">AAA</div>
+        <div class="itens center">123</div>
+        <div class="itens center">Lorem ipsum</div>
+        <div class="itens center">item 4</div>
+    </section>
+
+    <p>align self: baseline + align itens(container): 0 </p>
+    <section class="flex-container">
+        <div class="itens baseline">AAA</div>
+        <div class="itens baseline">123</div>
+        <div class="itens baseline">Lorem ipsum</div>
+        <div class="itens baseline">item 4</div>
+    </section>
+
+    <p>align self: flex-end + align itens(container): 0 </p>
+    <section class="flex-container">
+        <div class="itens end">AAA</div>
+        <div class="itens end">123</div>
+        <div class="itens end">Lorem ipsum</div>
+        <div class="itens end">item 4</div>
+    </section>
+
+    <p>align self: flex-start + align itens(container): 0 </p>
+    <section class="flex-container">
+        <div class="itens start">AAA</div>
+        <div class="itens start">123</div>
+        <div class="itens start">Lorem ipsum</div>
+        <div class="itens start">item 4</div>
+    </section>
+
+    <p>align self: stretch + align itens(container): 0 </p>
+    <section class="flex-container">
+        <div class="itens stretch">AAA</div>
+        <div class="itens stretch">123</div>
+        <div class="itens stretch">Lorem ipsum</div>
+        <div class="itens stretch">item 4</div>
+    </section>
+    
+    <h2>column</h2>
+    <p>align self: auto + align itens(container): center</p>
+    <section class="flex-container align direction">
+        <div class="itens auto">AAA</div>
+        <div class="itens auto">123</div>
+        <div class="itens auto">Lorem ipsum</div>
+        <div class="itens auto">item 4</div>
+    </section>
+
+    <p>align self: center + align itens(container): 0 </p>
+    <section class="flex-container direction">
+        <div class="itens center">AAA</div>
+        <div class="itens center">123</div>
+        <div class="itens center">Lorem ipsum</div>
+        <div class="itens center">item 4</div>
+    </section>
+
+    <p>align self: baseline + align itens(container): 0 </p>
+    <section class="flex-container direction">
+        <div class="itens baseline">AAA</div>
+        <div class="itens baseline">123</div>
+        <div class="itens baseline">Lorem ipsum</div>
+        <div class="itens baseline">item 4</div>
+    </section>
+
+    <p>align self: flex-end + align itens(container): 0 </p>
+    <section class="flex-container direction">
+        <div class="itens end">AAA</div>
+        <div class="itens end">123</div>
+        <div class="itens end">Lorem ipsum</div>
+        <div class="itens end">item 4</div>
+    </section>
+
+    <p>align self: flex-start + align itens(container): 0 </p>
+    <section class="flex-container direction">
+        <div class="itens start">AAA</div>
+        <div class="itens start">123</div>
+        <div class="itens start">Lorem ipsum</div>
+        <div class="itens start">item 4</div>
+    </section>
+
+    <p>align self: stretch + align itens(container): 0 </p>
+    <section class="flex-container direction">
+        <div class="itens stretch">AAA</div>
+        <div class="itens stretch">123</div>
+        <div class="itens stretch">Lorem ipsum</div>
+        <div class="itens stretch">item 4</div>
+    </section>
+    
+</body>
+</html>
