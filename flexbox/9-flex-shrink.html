@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex shrink</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+
+        .itens {
+            margin: 5px;
+            background-color: blue;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            margin-bottom: 10px;
+        }
+
+        .s-0 {
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .s-1 {
+            flex-shrink: 1;
+        }
+
+        .s-2 {
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .s-3 {
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>flex-shrink:0 + flex basis:100px</p>
+    <div class="flex-container">
+
+        <div class="itens s-0 fg-1">A</div>
+        <div class="itens s-0 fg-1">B</div>
+        <div class="itens s-0 fg-1">C</div>
+        <div class="itens s-0 fg-1">D</div>
+        <div class="itens s-0 fg-1">E</div>
+    </div>
+
+
+    <p>flex-shrink:1</p>
+    <div class="flex-container">
+
+        <div class="itens s-1 fg-1">A</div>
+        <div class="itens s-1 fg-1">B</div>
+        <div class="itens s-1 fg-1">C</div>
+        <div class="itens s-1 fg-1">D</div>
+        <div class="itens s-1 fg-1">E</div>
+    </div>
+
+    <p>flex-shrink:1 com conteudos de tamanhos diferentes</p>
+    <div class="flex-container">
+
+        <div class="itens s-1 fg-1">A</div>
+        <div class="itens s-1 fg-1">Lorem ipsum </div>
+        <div class="itens s-1 fg-1">C</div>
+        <div class="itens s-1 fg-1">D</div>
+        <div class="itens s-1 fg-1">E</div>
+
+    </div>
+    <p>flex-shrink:2 + flex-basis:100px</p>
+    <div class="flex-container">
+
+        <div class="itens s-2 fg-1">AAAA</div>
+        <div class="itens s-3 fg-1">B generation</div>
+        <div class="itens s-2 fg-1">C lipsum</div>
+        <div class="itens s-3 fg-1">DD</div>
+        <div class="itens s-2 fg-1">E generation</div>
+    </div>
+
+    <p>flex-shrink:3 + flex-basis:100px</p>
+    <div class="flex-container">
+
+        <div class="itens s-2 fg-1">AAAA</div>
+        <div class="itens s-3 fg-1">B generation</div>
+        <div class="itens s-2 fg-1">C lipsum lipsum</div>
+        <div class="itens s-3 fg-1">DD</div>
+        <div class="itens s-2 fg-1">E generation</div>
+    </div>
+
+</body>
+
+</html>

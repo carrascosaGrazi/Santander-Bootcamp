@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos-order</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        .itens {
+            flex: 1;
+            background-color: aquamarine;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        .o1{
+            order:1;
+        }
+
+        .o2{
+            order:2;
+        }
+
+        .o3{
+            order:3;
+        }
+
+        .direction{
+            flex-direction: column;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <p>order:0</p>
+    <div class="flex-container">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <div class="itens">4</div>
+        <div class="itens">5</div>
+    </div>
+
+    <p>orders diferentes</p>
+    <div class="flex-container">
+        <div class="itens o2">1</div>
+        <div class="itens o1">2</div>
+        <div class="itens o3">3</div>
+        <div class="itens o3">4</div>
+        <div class="itens o1">5</div>
+    </div>
+
+    <h2>column</h2>
+    <p>flex column order:0</p>
+    <div class="flex-container direction">
+        <div class="itens">1</div>
+        <div class="itens">2</div>
+        <div class="itens">3</div>
+        <div class="itens">4</div>
+        <div class="itens">5</div>
+    </div>
+
+    <p> flex column orders diferentes</p>
+    <div class="flex-container direction">
+        <div class="itens o2">1</div>
+        <div class="itens o1">2</div>
+        <div class="itens o3">3</div>
+        <div class="itens o3">4</div>
+        <div class="itens o1">5</div>
+    </div>
+</body>
+
+</html>
